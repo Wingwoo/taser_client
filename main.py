@@ -26,6 +26,8 @@ except:
 
 while True:
     data = s.recv(bsize)
-    ms = int(data.decode())
-    tase(ms)
+    if data != "":
+        ms = int(data.decode())
+        tase(ms)
     sleep(0.1)
+
